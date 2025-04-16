@@ -1,0 +1,37 @@
+{
+  "actions": [
+    {
+      "type": "pointer",
+      "id": "swipeUp",
+      "parameters": {
+        "pointerType": "touch"
+      },
+      "actions": [
+        {
+          "type": "pointerMove",
+          "duration": 0,
+          "x": 129,
+          "y": 838.8000000000001
+        },
+        {
+          "type": "pointerDown",
+          "button": 0
+        },
+        {
+          "type": "pause",
+          "duration": 100
+        },
+        {
+          "type": "pointerMove",
+          "duration": 500,
+          "x": 129,
+          "y": 186.4
+        },
+        {
+          "type": "pointerUp",
+          "button": 0
+        }
+      ]
+    }
+  ]
+}

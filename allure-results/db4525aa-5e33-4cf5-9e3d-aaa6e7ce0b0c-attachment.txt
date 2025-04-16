@@ -1,0 +1,3 @@
+{
+  "appPath": "/Users/tarun/Home/workspace/webdriverio/repo/ios_app_automation/apps/ios/wdiodemoapp.app"
+}

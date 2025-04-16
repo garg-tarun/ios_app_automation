@@ -1,0 +1,4 @@
+{
+  "using": "accessibility id",
+  "value": "You successfully signed up!"
+}
