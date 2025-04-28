@@ -1,4 +1,0 @@
-{
-  "using": "accessibility id",
-  "value": "//XCUIElementTypeOther[@name=\"WEBDRIVER\"]"
-}

@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//XCUIElementTypePickerWheel[@value=\"Select an item...\"]"
-}

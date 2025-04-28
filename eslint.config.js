@@ -4,6 +4,7 @@ import mocha from 'eslint-plugin-mocha';
 import * as wdio from 'eslint-plugin-wdio';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import parser from '@typescript-eslint/parser';
+import globals from 'globals';
 
 /** @type {import("eslint/config").FlatConfig[]} */
 export default [
@@ -16,6 +17,7 @@ export default [
                 __dirname: true,
                 module: true,
                 require: true,
+                ...globals.node,
             },
         },
     },
@@ -34,6 +36,7 @@ export default [
             },
             globals: {
                 // Mocha test functions
+                process: true,
                 describe: true,
                 it: true,
                 before: true,

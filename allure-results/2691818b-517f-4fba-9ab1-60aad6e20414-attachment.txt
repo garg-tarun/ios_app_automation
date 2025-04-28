@@ -1,4 +1,0 @@
-{
-  "using": "-ios predicate string",
-  "value": "name == \"done_button\""
-}

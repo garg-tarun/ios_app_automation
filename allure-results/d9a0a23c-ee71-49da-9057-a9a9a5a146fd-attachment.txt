@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//XCUIElementTypeImage[@name=\"assets/src/assets/webdriverio.png\"]"
-}

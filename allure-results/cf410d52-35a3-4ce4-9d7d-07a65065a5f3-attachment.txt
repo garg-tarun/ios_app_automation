@@ -1,3 +1,0 @@
-{
-  "appId": "org.reactjs.native.example.wdiodemoapp"
-}

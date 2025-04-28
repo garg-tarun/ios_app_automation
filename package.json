@@ -21,6 +21,9 @@
   },
   "scripts": {
     "eslint" : "eslint .",
+    "test:drag": "wdio run ./wdio.conf.ts --spec test/specs/ios/drag.spec.ts",
+    "test:spec": "wdio run ./wdio.conf.ts --spec",
+    "test": "wdio run ./wdio.conf.ts",
     "wdio": "wdio run ./wdio.conf.ts",
     "allure:generate": "allure generate ./allure-results --clean -o ./allure-report",
     "allure:open": "allure open ./allure-report",

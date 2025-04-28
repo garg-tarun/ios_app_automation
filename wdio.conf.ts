@@ -1,4 +1,6 @@
 import * as path from 'path';
+import { TestArtifactsManager } from './test/utils/TestArtifactsManager';
+
 
 const iosCaps: WebdriverIO.Capabilities = {
     'appium:platformName': 'iOS',
@@ -229,6 +231,9 @@ export const config: WebdriverIO.Config = {
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
+    beforeTest: async function (_test, _context) {
+        await TestArtifactsManager.startVideoRecording();
+    },
     // beforeTest: function (test, context) {
     // },
     /**
@@ -253,9 +258,12 @@ export const config: WebdriverIO.Config = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    afterTest: async function(_test, _context, { error:_error, result:_result, duration:_duration, passed, retries:_retries }) {
+    afterTest: async function(test, _context, { error:_error, result:_result, duration:_duration, passed, retries:_retries }) {
+        await TestArtifactsManager.stopVideoRecording(test.title, passed);
+
         if (!passed) {
-            await browser.takeScreenshot();
+            await TestArtifactsManager.attachAppiumLogs();
+            await TestArtifactsManager.captureScreenshot(test.title);
         }
     },
 
