@@ -1,8 +1,8 @@
 // eslint.config.js
 import js from '@eslint/js';
-import * as mocha from 'eslint-plugin-mocha';
+import mocha from 'eslint-plugin-mocha';
 import * as wdio from 'eslint-plugin-wdio';
-import * as tseslint from '@typescript-eslint/eslint-plugin';
+import tseslint from '@typescript-eslint/eslint-plugin';
 import parser from '@typescript-eslint/parser';
 
 /** @type {import("eslint/config").FlatConfig[]} */
